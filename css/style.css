@@ -1,37 +1,57 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
-  
+
+  :root{
+    --pretty-color: rgb(248, 253, 224);
+  }
+
+  body{
+    font-family: Inconsolata, cursive;
+  }
+
+  .skip{
+    position: absolute;
+    left: -1000px;
+    color:rgb(71, 50, 18);
+    background-color: yellow;
+  }
+
+  .skip:focus{
+    left: 10px;
+  }
+
   form {
     display: grid;
-    grid-template-columns: 50% 50%;
-    border: 1px solid #ccc;
+    grid-template-columns: 50% 25%;
+    border: 1px solid #fb9999;
     border-radius: 16px;
     width:70%;
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #702082;
-    background: #CFC096;
+    background: var(--pretty-color);
   }
 
   .radio {
+    background-color: rgb(255, 228, 232);
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     /* background: #575294; */
     color: #702082;
   }
 
   #name {
-    width: 100%;
     padding: 10px;
+    grid-column: 1/2;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    background: #ffe2f9;
+    color: #000000;
   }
 
   #message {
-    width: 100%;
+    grid-column: 1/2;
     padding: 10px;
     resize: vertical;
   }
@@ -46,7 +66,7 @@
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #451447;
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,5 +74,5 @@
   }
 
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #451447;
   }
